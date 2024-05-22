@@ -1,0 +1,50 @@
+
+/* Customize CSS for search bar  */
+.form-control::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color:#3C4048;
+    opacity: 1; /* Firefox */
+}
+
+.form-control:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color:#3C4048;
+}
+
+.form-control::-ms-input-placeholder { /* Microsoft Edge */
+    color:#3C4048;
+}
+/* nav bar */
+.navbar-back-ground{
+    background-color: #B4B4B3 !important;
+}
+/* btn Customize */
+.btn{
+    background-color: #C7B7A3;
+}
+.btn:hover{
+    background-color: #EADBC8;
+}
+
+.bi-house{
+    transform: scale(2);
+    margin-bottom: 3px;
+    margin-left: 10px;
+}
+
+.c-item img {
+    max-height: 620px; /* adjust height */
+    width: 100%;
+    object-fit: cover; /* stay the same ratio to fit in */
+  }
+
+.centered-search-bar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh; /* 70%占據整個視窗高度 */
+}
+.search-bar{
+    width: 75%;
+}
+.input-back-ground{
+    background-color: #EBE3D5 !important;
+}

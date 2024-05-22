@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Nba players from ball don't lie API</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-back-ground">
+        <!-- navbar -->
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <!-- House icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+                <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z"/>
+              </svg>
+            <!-- House icon -->
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav  mb-2 mb-lg-0 ms-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Dropdown
+                    </a>
+                    <ul class="dropdown-menu bg-dark">
+                      <li><a class="dropdown-item bg-dark text-secondary" href="#" >Action</a></li>
+                      <li><a class="dropdown-item bg-dark text-secondary" href="#">Another action</a></li>
+                      <li><hr class="dropdown-divider bg-dark text-secondary"></li>
+                      <li><a class="dropdown-item bg-dark text-secondary" href="#">Something else here</a></li>
+                    </ul>
+                  </li>
+              <!-- <li class="nav-item">
+                <a class="home nav-link active" aria-current="page" href="#">Home</a>
+              </li> -->
+
+              <li class="nav-item">
+                <a class="home nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <!-- 這可以拿到content<input class="form-control me-2 bg-dark" type="search" placeholder="Search" aria-label="Search"> -->
+              <!-- 這可以拿到content 用<button class="btn btn-outline-white" type="submit">Search</button> -->
+            </form>
+          </div>
+        </div>
+    </nav>
+      <!-- navbar -->
+      <div id="carouselExample" class="carousel slide">
+        <!-- carousel-indicators -->
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <!-- carousel-indicators -->
+
+        <!-- carousel -->
+        <div class="carousel-inner">
+          <div class="carousel-item active c-item">
+            <img src="/images/nikeJordan.jpg" class="d-block w-100 c-image" alt="Rainy Basketball cpurt" >
+            <!-- carousel-search bar  -->
+            <div class="carousel-caption top-0 mt-24 bt-5 py-5 centered-search-bar">
+                <form class="d-flex mt-24 bt-5 py-5 search-bar" role="search" action="/players"method="post">
+                <!-- content--><input class="form-control me-2 bg-dark input-back-ground" type="search" placeholder="Search" aria-label="Search" name="fname">
+                <!-- content用--><button class="btn btn-outline-white" type="submit" action="submit">Search</button>
+                </form>
+            <!-- carousel-search bar -->
+            </div>
+          </div>
+          <div class="carousel-item c-item ">
+            <img src="/images/airJordan.jpg" class="d-block w-100 c-image" alt="jordanlogo">
+          </div>
+          <div class="carousel-item c-item">
+            <img src="/images/jordanlogo.jpg" class="d-block w-100 c-image" alt="airJordan">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+        <!--Search result-->
+        <div class="container mt-5">
+            <% if (locals.moreDetails) { %>
+              <h1 class="text-center">More Details:</h1>
+              <div class="modal modal-sheet position-static d-block bg-body-secondary p-4 py-md-5" tabindex="-1" role="dialog" id="modalTour">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content rounded-4 shadow">
+                    <div class="modal-body p-5">
+                      <h2 class="fw-bold mb-0"><%=moreDetails.first_name %> <%= moreDetails.last_name %></h2>
+              
+                      <ul class="d-grid gap-4 my-5 list-unstyled small">
+                        <!-- point one  -->
+                        <li class="d-flex gap-4">
+                            <i class="bi bi-chevron-contract text-body-secondary flex-shrink-0" style="font-size: 48px;"></i>
+                          <div>
+                            <h5 class="mb-0">Position: <%= moreDetails.position %></h5>
+                          </div>
+                        </li>
+                        <!-- point two  -->
+                        <li class="d-flex gap-4">
+                            <i class="bi bi-activity text-body-secondary flex-shrink-0" style="font-size: 48px;"></i>
+                          <div>
+                            <h5 class="mb-0">Height: <%= moreDetails.height %> CM :<%=moreDetails.height_cm%> </h5>
+                          </div>
+                        </li>
+                        <!-- point three  -->
+                        <li class="d-flex gap-4">
+                            <i class="bi bi-alt text-body-secondary flex-shrink-0" style="font-size: 48px;"></i>
+                          <div>
+                            <h5 class="mb-0">Weight: <%= moreDetails.weight %> KG :<%=moreDetails.weight_kg%> </h5>
+                          </div>
+                        </li>
+                        <!-- point four  -->
+                        <li class="d-flex gap-4">
+                            <i class="bi bi-chevron-expand text-body-secondary flex-shrink-0" style="font-size: 48px;"></i>
+                          <div>
+                            <h5 class="mb-0">Draft Year: <%= moreDetails.draft_year %></h5>
+                          </div>
+                        </li>
+                        <!-- point five  -->
+                        <li class="d-flex gap-4">
+                            <i class="bi bi-hash text-body-secondary flex-shrink-0" style="font-size: 48px;"></i>
+                          <div>
+                            <h5 class="mb-0">Draft Round: <%= moreDetails.draft_round %></h5>
+                          </div>
+                        </li>
+                        <!-- point six  -->
+                        <li class="d-flex gap-4">
+                            <i class="bi bi-chevron-bar-contract text-body-secondary flex-shrink-0 " style="font-size: 48px;"></i>
+                          <div>
+                            <h5 class="mb-0">Draft Number: <%= moreDetails.draft_number %></h5>
+                          </div>
+                        </li>
+                      </ul>
+                      <button type="button" class="btn btn-lg btn-outline-white mt-5 w-100" data-bs-dismiss="modal">Great, thanks!</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          <% } else if (error) { %>
+              <h1><%= error %></h1>
+          <% } else { %>
+              <h1>No results found.</h1>
+          <% } %>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+          //height conveter
+          function convertHeightToCm(height) {
+                const [feet,inches] = height.split(`-`).map(Number);   //用height.split 分開原有的資料.map(Number) 設定為數字
+                const cm = (feet*30.48)+(inches*2.54) 
+                return cm.toFixed(0); 
+            }
+          // weight converter 
+          function convertWeightToKg(pounds) {
+                const kg = pounds * 0.453592; 
+                    return kg.toFixed(0); 
+                } 
+        </script>
+        
+</body>
+</html>
