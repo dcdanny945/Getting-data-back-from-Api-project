@@ -77,9 +77,9 @@ app.post("/playerdetails", async (req, res) => {
             // moreDetails.height_cm = convertHeightToCm(details.height);
             // moreDetails.weight_kg = convertHeightToCm(details.weight);
             
-            res.render("playerDetails.ejs", { moreDetails: details });
+            res.render("playerdetails.ejs", { moreDetails: details });
         } else {
-            res.render("playerDetails.ejs", { error: "Player details not found" });
+            res.render("playerdetails.ejs", { error: "Player details not found" });
         }
     } catch (error) {
         console.error(error);
