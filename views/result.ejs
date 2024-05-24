@@ -25,11 +25,11 @@
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                       Dropdown
                     </a>
-                    <ul class="dropdown-menu bg-dark">
-                      <li><a class="dropdown-item bg-dark text-secondary" href="#" >Action</a></li>
-                      <li><a class="dropdown-item bg-dark text-secondary" href="#">Another action</a></li>
-                      <li><hr class="dropdown-divider bg-dark text-secondary"></li>
-                      <li><a class="dropdown-item bg-dark text-secondary" href="#">Something else here</a></li>
+                    <ul class="dropdown-menu bg-dark navbar-back-ground dropdown-item-custom">
+                      <li><a class="dropdown-item bg-dark text-light navbar-back-ground dropdown-item-custom" href="#" >Action</a></li>
+                      <li><a class="dropdown-item bg-dark text-light navbar-back-ground dropdown-item-custom" href="#">Another action</a></li>
+                      <li><hr class="dropdown-divider bg-dark text-light navbar-back-ground dropdown-item-custom"></li>
+                      <li><a class="dropdown-item bg-dark text-light navbar-back-ground dropdown-item-custom" href="#">Something else here</a></li>
                     </ul>
                   </li>
               <!-- <li class="nav-item">
@@ -112,7 +112,9 @@
                 </div>
               <%})%>
           <%}else if(error){%>
-            <h1><%=error%></h1>
+            <div class="mt-5 mb-4"> <!--24.05.24 content layout -->
+              <h3 class="text-center mt-10"><%=error%> 😢</h3>
+            </div>
             <%} else { %>
               <h1>No results found.</h1>
             <% } %>
