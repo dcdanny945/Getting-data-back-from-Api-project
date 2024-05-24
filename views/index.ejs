@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="/styles/style.css">
 </head>
 <body>
+  <div class="container">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-back-ground">
         <!-- navbar -->
         <div class="container-fluid">
@@ -33,7 +34,7 @@
                     </ul>
                   </li>
               <li class="nav-item">
-                <a class="home nav-link active" aria-current="page" href="#">About</a>
+                <a class="home nav-link active" aria-current="page" href="#" id="about">About</a>
               </li>
             </ul>
             <form class="d-flex" role="search">
@@ -57,7 +58,7 @@
           <div class="carousel-item active c-item">
             <img src="/images/nikeJordan.jpg" class="d-block w-100 c-image" alt="Rainy Basketball cpurt" >
             <!-- carousel-search bar  -->
-            <div class="carousel-caption top-0 mt-24 bt-5 py-5 centered-search-bar">
+            <div class=" top-0 mt-24 bt-5 py-5 centered-search-bar carousel-caption">
                 <form class="d-flex mt-24 bt-5 py-5 search-bar" role="search" action="/players"method="post">
                 <!-- content--><input class="form-control me-2 bg-dark input-back-ground" type="search" placeholder="Search" aria-label="Search" name="fname">
                 <!-- content用--><button class="btn btn-outline-white" type="submit" action="submit">Search</button>
@@ -84,13 +85,13 @@
         </button>
       </div>
 <main>
-  <div class="container">
+  
         <!-- first content -->
-          <div class="row justify-content-center my-5">
-            <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-              <div class="p-5 text-center bg-body-tertiary rounded-3">
-                <div class="embed-responsive embed-responsive-16by9">
-                  <video class="embed-responsive-item" width="1240" height="720" controls>
+          <div class="row justify-content-center my-5 video">
+            <div class="col-lg-8">
+              <div class="p-5 text-center bg-body-tertiary rounded-3 video">
+                <div class="ratio ratio-16x9">
+                  <video class="embed-responsive-item video "controls>
                     <source src="/images/Beige Retro Television Music YouTube Intro Video.mp4" type="video/mp4">
                   </video>
                 </div>

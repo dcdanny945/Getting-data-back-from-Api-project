@@ -1,4 +1,16 @@
+/* small screen for phones */
+@media (width <= 768px) {
+    .centered-search-bar {
+        min-height: 50vh; /* 使用 min-height 保持最小高度 */
+    }
+}
 
+/* Search bar in center for big screen  */
+@media (width >= 769px) {
+    .centered-search-bar {
+        min-height: 50vh; /* 使用 min-height 保持最小高度 */
+    }
+}
 /* Customize CSS for search bar  */
 .form-control::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
     color:#3C4048;
@@ -18,10 +30,10 @@
 }
 /* btn Customize */
 .btn{
-    background-color: #C7B7A3;
+    background-color: #FFA62F;
 }
 .btn:hover{
-    background-color: #EADBC8;
+    background-color: #FFC96F;
 }
 
 .bi-house{
@@ -40,7 +52,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 70vh; /* 70%占據整個視窗高度 */
+    /* min-height: 70vh; 70%占據整個視窗高度 */
 }
 .search-bar{
     width: 75%;
@@ -54,4 +66,14 @@
 }
 .dropdown-item-custom{
     background-color:#7D7D7D !important ;
+}
+/* @media (height >= 667px ) screen and (orientation: portrait) {
+    .video {width: 375px}
+  };
+     */
+.video{
+    object-fit: cover;
+}
+#about{
+    color: #DD761C;
 }
