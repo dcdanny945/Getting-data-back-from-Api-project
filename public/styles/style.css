@@ -40,8 +40,12 @@
     transform: scale(2);
     margin-bottom: 3px;
     margin-left: 10px;
+    color: #FFA62F;
+    
 }
-
+.bi-house:hover{
+    color: #FFC96F;
+}
 .c-item img {
     max-height: 620px; /* adjust height */
     width: 100%;
