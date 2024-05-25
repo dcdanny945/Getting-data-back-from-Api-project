@@ -28,6 +28,14 @@
 .navbar-back-ground{
     background-color: #454545 !important; 
 }
+/* dropdown font size adjustment */
+.navbar-nav .nav-link.dropdown-toggle{
+    font-size: 1.25rem;
+}
+/* About size adjustment */
+.navbar-nav .nav-item{
+    font-size: 1.25rem;
+}
 /* btn Customize */
 .btn{
     background-color: #FFA62F;
@@ -70,6 +78,7 @@
 }
 .dropdown-item-custom{
     background-color:#7D7D7D !important ;
+    font-size: 1.25rem;
 }
 /* @media (height >= 667px ) screen and (orientation: portrait) {
     .video {width: 375px}
@@ -80,4 +89,10 @@
 }
 #about{
     color: #DD761C;
+}
+#dropdown-menu-first-one{
+    font-size: 19px;
+}
+#dropdown-items{
+    font-size: 12px;
 }
