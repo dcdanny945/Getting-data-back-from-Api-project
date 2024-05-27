@@ -3,6 +3,7 @@
 <head>
   <%- include("partials/header.ejs")%>
 </head>
+
 <body>
       <!--Search result-->
         <div class="container mt-5">
@@ -24,16 +25,16 @@
                         </li>
                         <!-- point two  -->
                         <li class="d-flex gap-4">
-                            <i class="bi bi-activity text-body-secondary flex-shrink-0" style="font-size: 48px;"></i>
+                          <i class="bi bi-activity text-body-secondary flex-shrink-0" style="font-size: 48px;"></i>
                           <div>
-                            <h5 class="mb-0">Height: <%= moreDetails.height %> CM :<%=moreDetails.height_cm%> </h5>
+                              <h5 class="mb-0">Height: <%= moreDetails.height %></h5>
                           </div>
-                        </li>
+                      </li>
                         <!-- point three  -->
                         <li class="d-flex gap-4">
                             <i class="bi bi-alt text-body-secondary flex-shrink-0" style="font-size: 48px;"></i>
                           <div>
-                            <h5 class="mb-0">Weight: <%= moreDetails.weight %> KG :<%=moreDetails.weight_kg%> </h5>
+                            <h5 class="mb-0">Weight: <%= moreDetails.weight %> pounds <%=moreDetails.weight_kg%> </h5>
                           </div>
                         </li>
                         <!-- point four  -->
@@ -59,7 +60,8 @@
                         </li>
                       </ul>
                       <!-- 27.05.24 add on back to search results -->
-                      <a href="/result?search=<%=locals.searchName %>" class="btn btn-lg btn-outline-white mt-5 w-100">Great, thanks!</a>
+                       <a href="/" class="btn btn-lg btn-outline-white mt-5 w-100">Great, thanks!</a>
+                      <!-- <li class="btn btn-lg btn-outline-white mt-5 w-100"><%=locals.moreDetails.team.full_name%></li> -->
                     </div>
                   </div>
                 </div>
