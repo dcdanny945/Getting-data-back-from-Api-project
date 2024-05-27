@@ -2,6 +2,7 @@ import express from"express";
 import axios from "axios";
 import path from 'path';
 import bodyParser from "body-parser";
+import { error } from "console";
 
 const app = express();
 const __dirname = path.resolve();
@@ -18,6 +19,35 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get("/",(req, res)=>{
     res.render("index.ejs");
+})
+app.get("/about",(req,res)=>{
+    res.render("about.ejs");
+})
+
+//27.05.24 Great thanks btn pass back to pervious result 
+app.get("/result",async(req,res)=>{
+    const searchName = req.query.searchName // use Query Parameters in Express to pass on data
+    if (!searchName) {
+        return res.render("result.ejs", { players: [], error: "No results found." });// if there not searched name. use [] to pass back "No results found."
+    }
+    const UrlToPlayerByName = `${API_URL}/players/?search=${searchName}`;
+    try {
+        const result = await axios.get(UrlToPlayerByName,{
+            headers: {
+                Authorization: ApiKey,
+            }
+        });
+        const players = result.data.data;
+        if(players.length > 0){
+            res.render("result.ejs",{ players : players, searchName: searchName});
+        }else{
+            res.render("result.ejs",{players: [ ],error:"No players found with this name."});
+        }
+    } catch (error) {
+        console.log(error);
+        res.render("result.ejs",{players: [ ],error:"Fail to fetch player data"});
+    }
+
 })
 
 //14.05.24 新增 action = "/players" //21.05.24 ry to search player by names
