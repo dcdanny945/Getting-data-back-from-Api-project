@@ -118,7 +118,7 @@
 }
 .parallax {
     /* The image used */
-    background-image: url("/images/rainy Basketball.jpg");
+    background-image: url("/images/rainy Basketball.jpg") !important;
   
     /* Set a specific height */
     min-height: 500px; 
