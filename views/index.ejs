@@ -1,44 +1,54 @@
 <!DOCTYPE html>
 <html>
-    <head>
-    <%- include('partials/header.ejs') %>
-    </head>
-
-  <body>
+<head>
+  <%- include('partials/header.ejs') %>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
   <main>
-
-        <!-- first content -->
-          <div class="row justify-content-center my-5 video">
-            <div class="col-lg-8">
-              <div class="p-5 text-center bg-body-tertiary rounded-3 video">
-                <div class="ratio ratio-16x9">
-                  <video class="embed-responsive-item video "controls autoplay muted>
-                    <source src="/images/Beige Retro TV Music Ball Video.mp4" type="video/mp4">
-                  </video>
-                </div>
-              </div>
+    <!-- Parallax section -->
+  <!-- <div class="parallax" > -->
+    <!-- Video section -->
+    <div class="container my-5">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="p-5 text-center bg-body-tertiary rounded-3">
+            <div class="ratio ratio-16x9">
+              <video class="embed-responsive-item" controls autoplay muted>
+                <source src="/images/Beige Retro TV Music Ball Video.mp4" type="video/mp4">
+              </video>
             </div>
           </div>
-        <!-- Second content -->
-          <div class="row flex-lg-row-reverse align-items-center g-5 py-5 container-fluid">
+        </div>
+      </div>
+    </div>
+  <!-- </div> -->
+    <!-- Second content -->
+  <!-- parallax -->  
+  <div class="parallax">
+    <div class="container-fluid py-5 content">
+        <div class="row flex-lg-row-reverse align-items-center g-5">
             <div class="col-10 col-sm-8 col-lg-6">
-              <img src="/images/Rainy Basketball.jpg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+                <img src="/images/Michael jordan reverse dunking.jpg" class="d-block mx-lg-auto img-fluid MJ" alt="Basketball Image" width="500" height="500" loading="lazy">
             </div>
             <div class="col-lg-6">
-                <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Responsive left-aligned hero with image</h1>
-                <p class="lead">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
-              <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-                <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Primary</button>
-                <button type="button" class="btn btn-outline-secondary btn-lg px-4">Default</button>
-              </div>
+                <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-5">Danny Chen</h1>
+                <h5 class="mb-3 mt-5  ccontent">Why and How</h5>
+                <p class="lead">I have loved basketball since I was a little kid. Using EJS, CSS, Bootstrap, JavaScript, Node.js, Express, and Axios, I created this website to fetch data from a third-party API. This website allows users to search for player details using their first name.</p>
+                <h5 class="mb-3 mt-5  ccontent">Hoping to Achieve</h5>
+                <p class="lead">I enjoy challenging myself in every way possible. Once I set my mind to something, I need to see it through. I completed a Bachelor's degree in Computer Science before moving to Australia. Recently I received my Permanent Residency, I am eager to revisit web development. I hope this project showcases my skills and demonstrates my ability to contribute to the success of my next employment. I am confident in my ability to use these skills to achieve great results.</p>
+                
             </div>
-          </div>
-        <!-- footer -->
-        <%- include("partials/footer.ejs") %>
+        </div>
+    </div>
+</div>
 
-</main>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- Footer -->
+    <%- include("partials/footer.ejs") %>
+  </main>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>

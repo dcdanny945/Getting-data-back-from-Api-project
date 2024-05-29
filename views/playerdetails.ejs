@@ -6,9 +6,11 @@
 
 <body>
       <!--Search result-->
+  <div class="parallax">
+    <div class="container-fluid py-5 content">
         <div class="container mt-5">
             <% if (locals.moreDetails) { %>
-              <h1 class="text-center">More Details:</h1>
+              <h1 class="text-center More-Details">More Details:</h1>
               <div class="modal modal-sheet position-static d-block bg-body-secondary p-4 py-md-5" tabindex="-1" role="dialog" id="modalTour">
                 <div class="modal-dialog" role="document">
                   <div class="modal-content rounded-4 shadow">
@@ -71,7 +73,10 @@
           <% } else { %>
               <h1>No results found.</h1>
           <% } %>
+        
         </div>
+      </div>
+    </div>
         <!-- footer -->
         <%- include("partials/footer.ejs") %>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">

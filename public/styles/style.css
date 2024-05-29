@@ -1,14 +1,14 @@
 /* small screen for phones */
 @media (width <= 768px) {
     .centered-search-bar {
-        min-height: 50vh; /* 使用 min-height 保持最小高度 */
+        min-height: 30vh; /* 使用 min-height 保持最小高度 */
     }
 }
 
 /* Search bar in center for big screen  */
 @media (width >= 769px) {
     .centered-search-bar {
-        min-height: 50vh; /* 使用 min-height 保持最小高度 */
+        min-height: 30vh; /* 使用 min-height 保持最小高度 */
     }
 }
 /* Customize CSS for search bar  */
@@ -39,6 +39,7 @@
 /* btn Customize */
 .btn{
     background-color: #FFA62F;
+    border: 0px;
 }
 .btn:hover{
     background-color: #FFC96F;
@@ -95,4 +96,61 @@
 }
 #dropdown-items{
     font-size: 12px;
+}
+.parallax {
+    /* Set a specific height */
+    min-height: 500px;
+    /* Ensure the video covers the entire container */
+    position: relative;
+    overflow: hidden;
+}
+  .parallax video {
+    /* Set video to fill the container */
+    min-width: 100%;
+    min-height: 100%;
+    /* Center the video */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* Make sure the video covers the entire container */
+    z-index: -1;
+}
+.parallax {
+    /* The image used */
+    background-image: url("/images/rainy Basketball.jpg");
+  
+    /* Set a specific height */
+    min-height: 500px; 
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 0px;
+  }
+.content {
+    background-color: rgba(255, 255, 255, 0.8); /* Optional: Adds a white background with transparency to content */
+    padding: 20px;
+    
+}
+.MJ{
+    border-radius: 5%;
+}
+.ccontent{
+    color: #DD761C;
+    font-weight:bold;
+}
+.lead{
+    font-weight:600;
+}
+.result-top{
+    padding-top: 50px;
+}
+.result-h1{
+    margin-bottom: 100px;
+}
+.More-Details{
+    margin-bottom: 50px;
 }
