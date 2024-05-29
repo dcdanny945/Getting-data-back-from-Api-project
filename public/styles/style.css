@@ -97,25 +97,7 @@
 #dropdown-items{
     font-size: 12px;
 }
-.parallax {
-    /* Set a specific height */
-    min-height: 500px;
-    /* Ensure the video covers the entire container */
-    position: relative;
-    overflow: hidden;
-}
-  .parallax video {
-    /* Set video to fill the container */
-    min-width: 100%;
-    min-height: 100%;
-    /* Center the video */
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    /* Make sure the video covers the entire container */
-    z-index: -1;
-}
+
 .parallax {
     /* The image used */
     background-image: url("/images/rainy Basketball.jpg") !important;
