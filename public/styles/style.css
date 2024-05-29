@@ -110,10 +110,9 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    border: 0px;
   }
 .content {
-    background-color: rgba(255, 255, 255, 0.8); /* Optional: Adds a white background with transparency to content */
+    background-color: rgba(255, 255, 255, 0.7); /* Optional: Adds a white background with transparency to content */
     padding: 20px;
     
 }

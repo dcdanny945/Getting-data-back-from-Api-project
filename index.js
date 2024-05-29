@@ -6,6 +6,7 @@ import bodyParser from "body-parser";
 const app = express();
 const __dirname = path.resolve();
 
+app.use(express.static("public"));
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
@@ -13,7 +14,7 @@ const port = 3000;
 const API_URL = "https://api.balldontlie.io/v1";
 const ApiKey = "63c73d28-522d-4677-be0d-62f71e452c3f";
 
-app.use(express.static("public"));
+
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get("/", (req, res) => {
