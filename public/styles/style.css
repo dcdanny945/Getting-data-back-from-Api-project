@@ -115,7 +115,12 @@ html{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    /* for mobile  */
+    position: relative;
+    transform: translate3d(0,0,0);
+    will-change: transform;
   }
+  
 .content {
     background-color: rgba(255, 255, 255, 0.7); /* Optional: Adds a white background with transparency to content */
     padding: 20px;
