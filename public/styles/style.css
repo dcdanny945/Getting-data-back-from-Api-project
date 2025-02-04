@@ -11,6 +11,11 @@
         min-height: 30vh; /* 使用 min-height 保持最小高度 */
     }
 }
+
+html{
+    color-scheme: dark;
+}
+
 /* Customize CSS for search bar  */
 .form-control::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
     color:#3C4048;
